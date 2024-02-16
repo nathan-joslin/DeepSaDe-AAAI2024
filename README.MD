@@ -1,7 +1,7 @@
 This document provides instructions to run the experiments.
 
 ### Parameters and how to run the codes
-5 folders corresponding to 5 use cases can be found in the UseCases Folder of the submitted zip. 
+5 folders corresponding to 5 use cases can be found in the UseCases Folder. 
 For each use case, a 'main_with_cv.py' file is provided which is the main experiment file.
 To run this script, following command should be used:
 
