@@ -1,7 +1,7 @@
 import sys
 sys.path.insert(0, 'path to src')
 
-from Learners import *
+from src.Learners import *
 
 
 class NeuralCombinedMnistClassifier(NeuralSaDeClassifier):
