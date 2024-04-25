@@ -1,4 +1,4 @@
-from BaseLearners import *
+from src.BaseLearners import *
 
 
 class NeuralSaDeClassifier(NeuralDeepSaDeBaseLearner):

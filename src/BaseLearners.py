@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from Optimizer import *
+from src.Optimizer import *
 import time
 import numpy as np
 import torch.utils.data as data
@@ -215,9 +215,9 @@ class NeuralDeepSaDeBaseLearner(Optimizer):
 
     def update_last_layer(self, W):
         self.mirror_nn.Layers[-1].weight.data = \
-            torch.tensor([np.transpose(np.transpose(W)[1:(self.mirror_nn.Layers[-1].in_features + 1)])],
+            torch.tensor(np.array([np.transpose(np.transpose(W)[1:(self.mirror_nn.Layers[-1].in_features + 1)])]),
                          dtype=torch.float32)[0]
-        self.mirror_nn.Layers[-1].bias.data = torch.tensor([np.transpose(np.transpose(W)[0])], dtype=torch.float32)[0]
+        self.mirror_nn.Layers[-1].bias.data = torch.tensor(np.array([np.transpose(np.transpose(W)[0])]), dtype=torch.float32)[0]
         if len(self.mapped_features) > 0:
             self.mirror_nn.mapped_feature_weights.data = torch.tensor(
                 np.transpose((np.transpose(W)[(self.mirror_nn.Layers[-1].in_features + 1):])),

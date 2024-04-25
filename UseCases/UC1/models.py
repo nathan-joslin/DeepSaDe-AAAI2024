@@ -1,5 +1,8 @@
 import sys
-sys.path.insert(0, 'path to src')
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_dir = os.path.abspath(os.path.join(current_dir, '../../'))
+sys.path.append(project_dir)
 from src.Learners import *
 
 
