@@ -202,7 +202,7 @@ def single_sade_run(X, y, train_idx=None, test_idx=None, K=None, fold_index=0, f
                  total_violations_train, total_violations_test, model.runtime]], model.validation_losses
 
 def save_config(folder):
-    with open('{}/config.txt'.format(folder), 'a+') as f:
+    with open('{}/config.txt'.format(folder), 'w') as f:
         f.write(' SADE_EPOCHS = {}\n BASELINE_EPOCHS = {}\n LEARNING_RATE = {}\n MAXIMAL_STEP_SIZE = {}\n SADE_BATCH_SIZE = {}\n BASELINE_BATCH_SIZE = {}\n SADE_MOMENTUM = {}\n BASELINE_MOMENTUM = {}\n SADE_WAITING_PERIOD = {}\n SADE_MARGINS = {}\n SADE_INITIAL_WEIGHT = {}\n OUTER_FOLDS = {}\n INNER_FOLDS = {}\n NETWORK = {}\n DEEPSADE_APPROACH = {}\n VALIDATION_SET_RATIO = {}\n DC_INITIALIZATION = {}\n GRADIENT_RANDOMIZATION_STRATEGY = {}\n MAPPED_FEATURES = {}\n TRANSFER_LEARNING = {}\n WEIGHT_DECAY = {}\n MAXSMT_OPTIMIZATION = {}\n'.format(
             SADE_EPOCHS, 
             BASELINE_EPOCHS, 
